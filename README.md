@@ -13,4 +13,5 @@
  Причина: Prettier "Code style issues found in the above file(s). Forgot to run Prettier?"
  Решение: Пока нет, просто удалил prettier. 
 
-Продолжаем мучения.
+3. "v-slot" => # и "v-slot:item.action" => #[`item.actions`] - видимо принятые сокращения, пока приму как данность.
+
