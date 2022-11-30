@@ -4,21 +4,19 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
+    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && nuxt build",
+    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
-    "lint:prettier": "prettier --check .",
-    "lint": "yarn lint:js && yarn lint:style && yarn lint:prettier",
-    "lintfix": "prettier --write --list-different . && yarn lint:js --fix && yarn lint:style --fix",
+    "lint": "yarn lint:js && yarn lint:style",
+    "lintfix": "yarn lint:js --fix && yarn lint:style --fix",
     "prepare": "husky install",
     "test": "jest"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint --cache",
-    "*.{css,scss,sass,html,vue}": "stylelint",
-    "*.**": "prettier --check --ignore-unknown"
+    "*.{css,scss,sass,html,vue}": "stylelint"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
@@ -50,7 +48,6 @@
     "jest-environment-jsdom": "^29.1.2",
     "lint-staged": "^13.0.3",
     "postcss-html": "^1.5.0",
-    "prettier": "^2.7.1",
     "stylelint": "^14.13.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recommended-vue": "^1.4.0",
