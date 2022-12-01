@@ -1,16 +1,7 @@
 
 
-## Начало работы с фрейморком Next и первые грабли.
+## Начало работы с фрейморком Nuxt и первые грабли.
 
-1. Ошибка 'digital envelope routines'. 
-Решение: 
-"scripts": {
-   "start": "SET NODE_OPTIONS=--openssl-legacy-provider && start",
-   "build": "SET NODE_OPTIONS=--openssl-legacy-provider && build"
- },
+Возникшие [проблемы](docs/PROBLEMS.md) в ходе знакомства с Nuxt
 
- 2. Нет возможности закомитить: error: failed to push some refs to 
- Причина: Prettier "Code style issues found in the above file(s). Forgot to run Prettier?"
- Решение: Пока нет, просто удалил prettier. 
 
-Продолжаем мучения.
